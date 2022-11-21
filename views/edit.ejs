@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Update <%= poke.name %></h1>
+        <form action="/pokemon/<%= id %>?_method=PUT" method="POST">
+            Name: <input type="text" name="name" value="<%= poke.name %>"> <br>
+            Type: <input type="text" name="type" value="<%= poke.type %>"><br>
+            <input type="submit" value="Update Pokemon">
+        </form>
+
+    
+</body>
+</html
