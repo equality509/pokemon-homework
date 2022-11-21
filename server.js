@@ -27,7 +27,22 @@ app.put('/pokemon/:id', (req, res) => {
     res.redirect('/pokemon')
 })
 
+app.get('/pokemon/new', (req, res) => {
+    res.render('new.ejs')
+})
 
+app.post('/pokemon', (req, res) => {
+    poke.push(req.body)
+    res.redirect('/pokemon')
+})
+
+
+app.delete("/pokemon/:id", (req, res) => {
+    //splice the item out of the array
+    poke.splice(req.params.id, 1)
+    // redirect user back to index
+    res.redirect("/pokemon")
+  })
 
 
 
