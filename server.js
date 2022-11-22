@@ -4,6 +4,7 @@ const poke = require('./models/pokemon.js')
 const methodOverride = require('method-override')
 app.use(express.urlencoded({extended: true})) 
 app.use(methodOverride("_method")) 
+app.use("/static", express.static("public")) // it's going serve files from a folder called "public" under /static example public/styles.css => /static/styles.css
 
 
 
